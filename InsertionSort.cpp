@@ -1,9 +1,9 @@
 #include<stdio.h>
 void insertion_sort(int a[],int n){
-	for(int i=1;i<n;i++){
-		int temp=a[i];
-		int j=i-1;
-		while(j>=0&&a[j]>temp){
+	for(int i=1;i<n;i++){//this loop works for unsorted part of array
+		int temp=a[i];//pick the frist element of unsorted array
+		int j=i-1;//end idx of sorted array
+		while(j>=0&&a[j]>temp){//it helps to insert the unsorted element in it's position
 			a[j+1]=a[j];
 			j--;
 		}
@@ -23,3 +23,5 @@ int main(){
 		printf("%d",a[i]);
 	}
 }
+//time complexity--o(n^2)
+//space complexity--o(1)
